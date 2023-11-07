@@ -1,13 +1,14 @@
 import sys
 
+# this is conditional handling
 input = sys.argv[1]
 
 if input == "t2.micro":
-    print("This t2.micro will charge you 20INR/hr")
+    print("This %s will charge you 20INR/hr"% input)
 elif input == "t2.medium":
-    print("This t2.medium will charge you 40INR/hr")
-elif input == "t2.large":
-    print("This t2.large will charge you 100INR/hr")
+    print("This {0} will charge you 40INR/hr".format(input))
+elif (input == "t2.large" or input == "t2.xlarge"):
+    print(f"This {input} will charge you 100INR/hr")
 else:
     print("Your input is not valid")
 
